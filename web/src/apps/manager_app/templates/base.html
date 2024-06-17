@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Default Title{% endblock %}</title>
+</head>
+<body>
+    {% block header %}
+        <nav>
+            <a href="{% url 'index' %}" class="button">Main</a>
+            <a href="{% url 'work' %}" class="button">Work</a>
+            <a href="{% url 'clients' %}" class="button">Clients</a>
+        </nav>
+    {% endblock %}
+
+    <main>
+        {% block content %}
+            <!-- Content of child templates will be injected here -->
+        {% endblock %}
+    </main>
+
+    {% block footer %}
+        <!-- Footer content goes here -->
+    {% endblock %}
+</body>
+</html>

@@ -4,9 +4,11 @@ services:
       context: ./web/
       dockerfile: Dockerfile
     ports: 
-      - 8080:8000
+      - 80:8000
     depends_on:
       - db
+    volumes:
+      - ./web:/app
     
   adminer:
     image: adminer

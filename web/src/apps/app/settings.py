@@ -7,7 +7,7 @@ SECRET_KEY = 'django-insecure-3#i9d*k51=!mlm!_&8p57^szvf7+c+vwruhs&j!i69%l#c*51y
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0']
+ALLOWED_HOSTS = ['*']
 
 
 INSTALLED_APPS = [
@@ -17,7 +17,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'manager_app',
+    'manager_app.apps.ManagerAppConfig'
 ]
 
 MIDDLEWARE = [
@@ -28,6 +28,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'app.urls'
